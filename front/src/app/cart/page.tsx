@@ -13,13 +13,13 @@ export const Page = ({
 }: Product) => {
   return (
     <Cart
-      id={id}
-      name={name}
-      description={description}
-      price={price}
-      stock={stock}
-      image={image}
-      categoryId={categoryId}
+      id={id!}
+      name={name!}
+      description={description!}
+      price={price!}
+      stock={stock!}
+      image={image!}
+      categoryId={categoryId!}
     />
   );
 };
