@@ -1,10 +1,11 @@
 import React from 'react'
-import LoginPage from '../../components/LoginPage/LoginPage'
+import Login from '@/components/Login/Login'
+import { LoginProps } from '@/helpers/types/loginrops'
 
-const page: React.FC = () => {
+const page: React.FC<LoginProps> = ({token, setToken}: LoginProps) => {
   return (
     <>
-    <LoginPage/>
+    <Login token={token} setToken={setToken}/>
     </>
   )
 }
