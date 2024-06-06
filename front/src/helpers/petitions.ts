@@ -6,6 +6,7 @@ const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 export const fetchProducts = async () => {
     try {
         const response = await fetch(`${apiUrl}/products/`, {
+          headers: {'ngrok-skip-browser-warning': 'true'},
             next: { revalidate: 1000 },
         });
         if (!response.ok) {
@@ -73,6 +74,7 @@ export const getOrders = async (token : string) => {
             cache: 'no-cache',
             headers: {
               Authorization: token,
+              'ngrok-skip-browser-warning': 'true',
             }
         });
         const orders = await response.json();

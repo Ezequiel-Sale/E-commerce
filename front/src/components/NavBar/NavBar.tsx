@@ -68,56 +68,41 @@ const NavBar: React.FC = () => {
         <button
           id="dropdownDefaultButton"
           data-dropdown-toggle="dropdown"
-          className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          className="text-white bg-gray-600 hover:bg-gray-600 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm mr-4 px-5 py-2.5 text-center inline-flex items-center dark:bg-gray-600 dark:hover:bg-gray-600 dark:focus:ring-red-800"
           type="button"
           onClick={handleDropdown}
         >
-          Dropdown button
-          <svg
-            className="w-2.5 h-2.5 ml-3"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 10 6"
-          >
-            <path
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="m1 1 4 4 4-4"
-            />
-          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false"><path d="M21 6H3V5h18v1zm0 5H3v1h18v-1zm0 6H3v1h18v-1z"></path></svg>
         </button>
         {dropdown && (
-          <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5">
+          <div className="absolute right-0 mt-2 w-48 bg-black rounded-md shadow-lg ring-1 ring-black ring-opacity-5">
             <div className="py-1">
               <Link href="/">
                 <Button className="block bg-red-500 w-full h-8">Productos</Button>
               </Link>
               <Link href="/categories">
-                <Button className="block bg-red-500 w-full h-8">Categorias</Button>
+                <Button className="block bg-red-500 w-full h-8 mt-0.5">Categorias</Button>
               </Link>
-              <Button className="block bg-red-500 w-full h-8">Sobre Nosotros</Button>
-              <Button className="block bg-red-500 w-full h-8">Contactanos</Button>
+              <Button className="block bg-red-500 w-full h-8 mt-0.5">Sobre Nosotros</Button>
+              <Button className="block bg-red-500 w-full h-8 mt-0.5">Contactanos</Button>
               {!userData?.token ? (
                 <>
                   <Link href={"/login"}>
-                    <Button className="block bg-red-500 w-full h-8">Ingresar</Button>
+                    <Button className="block bg-red-500 w-full h-8 mt-0.5">Ingresar</Button>
                   </Link>
                   <Link href={"/register"}>
-                    <Button className="block bg-red-500 w-full h-8">Registrarse</Button>
+                    <Button className="block bg-red-500 w-full h-8 mt-0.5">Registrarse</Button>
                   </Link>
                 </>
               ) : (
                 <>
                   <Link href={"/dashboard"}>
-                    <Button className="block bg-red-500 w-full h-8">Perfil</Button>
+                    <Button className="block bg-red-500 w-full h-8 mt-0.5">Perfil</Button>
                   </Link>
-                  <Button className="block bg-red-500 w-full h-8" onClick={logOut}>
+                  <Button className="block bg-red-500 w-full h-8 mt-0.5" onClick={logOut}>
                     Cerrar Sesión
                   </Button>
-                  <div className="flex items-center justify-between w-full px-4 py-2 text-sm text-gray-700">
+                  <div className="flex justify-center items-center w-full px-4 py-2 text-sm text-gray-700">
                     <Link href="/cart">
                       <Button className="">&#128722;</Button>
                     </Link>
@@ -132,7 +117,7 @@ const NavBar: React.FC = () => {
         )}
       </div>
       <div className="hidden lg:flex items-center">
-        <div className="flex gap-1 lg:mr-32">
+        <div className="flex gap-1 lg:mr-44">
           <Link href="/">
             <Button className="block bg-red-500 w-24 h-8">Productos</Button>
           </Link>
