@@ -1,11 +1,27 @@
-import Cart from '@/components/Cart/Cart'
-import { Product } from '@/helpers/types/Product'
-import React from 'react'
+import Cart from "@/components/Cart/Cart";
+import { Product } from "@/helpers/types/Product";
+import React from "react";
 
-const Page = ({id, name, description, price, stock, image, categoryId}: Product) => {
+export const Page = ({
+  id,
+  name,
+  description,
+  price,
+  stock,
+  image,
+  categoryId,
+}: Product) => {
   return (
-    <Cart id={id} name={name} description={description} price={price} stock={stock} image={image} categoryId={categoryId}/>
-  )
-}
+    <Cart
+      id={id}
+      name={name}
+      description={description}
+      price={price}
+      stock={stock}
+      image={image}
+      categoryId={categoryId}
+    />
+  );
+};
 
-export default Page
+export default Page;
