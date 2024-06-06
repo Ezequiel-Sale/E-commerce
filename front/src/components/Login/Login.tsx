@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { Button } from "@material-tailwind/react";
 import { ILogin } from "../../helpers/types/loginType";
@@ -9,10 +9,12 @@ import { LoginProps } from "@/helpers/types/loginrops";
 import { useRouter } from "next/navigation";
 import { loginUser } from "@/helpers/petitions";
 import Swal from "sweetalert2";
+import { UserSession } from "@/helpers/types/userSession";
 
 
-const Login: React.FC<LoginProps> = ({token, setToken}) => {
+const Login: React.FC<LoginProps> = () => {
   const router = useRouter()
+  const [token, setToken] = useState<string | null>(null)
   return (
     <div className="w-80 p-6 flex flex-col bg-gray-200 rounded-s mt-24 m-[auto] mb-4">
       <Formik<ILogin>
