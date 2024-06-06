@@ -2,7 +2,7 @@ import React from 'react'
 import DetailProduct from './[id]/page'
 import { IProduct } from '@/helpers/types'
 
-const Page= ({ id }: { id: string }) => {
+const page= ({ id }: { id: string }) => {
   return (
     <div>
         <DetailProduct params={{ id }} />
@@ -10,4 +10,4 @@ const Page= ({ id }: { id: string }) => {
   )
 }
 
-export default Page
+export default page

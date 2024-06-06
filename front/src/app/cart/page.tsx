@@ -2,7 +2,7 @@ import Cart from "@/components/Cart/Cart";
 import { Product } from "@/helpers/types/Product";
 import React from "react";
 
-export const Page = ({
+export const page = ({
   id,
   name,
   description,
@@ -24,4 +24,4 @@ export const Page = ({
   );
 };
 
-export default Page;
+export default page;
