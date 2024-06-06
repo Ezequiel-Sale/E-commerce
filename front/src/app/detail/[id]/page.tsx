@@ -2,16 +2,16 @@
 import Button from "@/components/Button/Button";
 import { fetchProductsById } from "@/helpers/petitions";
 import { IProduct } from "@/helpers/types";
+import { Product } from "@/helpers/types/Product";
 import { UserSession } from "@/helpers/types/userSession";
 import Image from "next/image";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import Swal from "sweetalert2";
 
 const DetailProduct = ({ params }: { params: { id: string } }) => {
   const [userData, setUserData] = useState<UserSession | null>(null);
-  const [productById, setProductById] = useState<IProduct | null>(null);
+  const [productById, setProductById] = useState<Product | null>(null);
   const router = useRouter();
 
   useEffect(() => {
@@ -68,8 +68,8 @@ const DetailProduct = ({ params }: { params: { id: string } }) => {
         {productById && (
           <>
             <Image
-              src={productById.image}
-              alt={productById.name}
+              src={productById.image!}
+              alt={productById.name!}
               width={200}
               height={200}
             />
@@ -80,7 +80,7 @@ const DetailProduct = ({ params }: { params: { id: string } }) => {
                 {productById.description}
               </p>
               <Button
-                id={productById.id.toString()}
+                id={productById.id?.toString()}
                 onClick={handleAddToCart}
                 className="bg-black w-[150px] h-8"
               >

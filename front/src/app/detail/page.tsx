@@ -1,11 +1,12 @@
 import React from 'react'
 import DetailProduct from './[id]/page'
-import { IProduct } from '@/helpers/types'
+import { Product } from '@/helpers/types/Product';
 
-const DetailPage = ({id}: {id: string}) => {
+
+const DetailPage = ({ params }: { params: { id: string } }) => {
   return (
     <div>
-        <DetailProduct params={{ id }} />
+        <DetailProduct params={params} />
     </div>
   )
 }

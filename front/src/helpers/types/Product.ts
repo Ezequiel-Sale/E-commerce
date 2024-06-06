@@ -1,4 +1,5 @@
 export interface Product {
+    params?:string
     id?: number;
     name?: string;
     description?: string;
