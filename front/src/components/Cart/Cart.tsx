@@ -79,13 +79,13 @@ const Cart: React.FC<IProduct> = () => {
       <div className="flex flex-col items-center mt-4 mb-8 md:flex md:flex-row md:justify-between md:items-start">
         <div className="flex flex-wrap w-[70vw] gap-1 mb-16 justify-center md:flex md:justify-start md:flex-wrap md:ml-6 md:gap-3">
           {order?.length > 0 ? (
-            order.map((orden: IProduct, index) => {
+            order.map((orden: IProduct, indexCart) => {
               return (
                 <div
-                  key={index}
+                  key={indexCart}
                   className="flex flex-col relative w-[200px] h-[300px] mt-4 bg-red-500 p-4 rounded-md text-red-200 bg-opacity-95 transition-transform hover:scale-110 drop-shadow-xl group z-0"
                 >
-                  <h4 className="font-bold text-white">{orden.name}<button id={orden.id.toString()} type="button" onClick={deleteProduct} className="absolute top-0.5 right-0.5 flex justify-center items-center cursor-pointer rounded-full w-4 bg-red-500 text-white  text-xs border border-black">x</button></h4>
+                  <p className="font-bold text-white">{orden.name}<button id={orden.id.toString()} type="button" onClick={deleteProduct} className="absolute top-0.5 right-0.5 flex justify-center items-center cursor-pointer rounded-full w-4 bg-red-500 text-white  text-xs border border-black">x</button></p>
                   <p className="text-white ">${orden.price}</p>
                   <div className="flex justify-center items-center h-36 mb-2 mt-2">
                     <Image
