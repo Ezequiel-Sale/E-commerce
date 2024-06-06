@@ -106,9 +106,6 @@ const NavBar: React.FC = () => {
                     <Link href="/cart">
                       <Button className="">&#128722;</Button>
                     </Link>
-                    <span className="text-white rounded-full bg-red-500 w-[12px] h-[12px] flex justify-center items-center text-xs mr-2">
-                      {order.length}
-                    </span>
                   </div>
                 </>
               )}
