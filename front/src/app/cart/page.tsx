@@ -2,7 +2,7 @@ import Cart from "@/components/Cart/Cart";
 import { Product } from "@/helpers/types/Product";
 import React from "react";
 
-export const CartPage: React.FC = ({
+const CartPage: React.FC = ({
   id,
   name,
   description,
