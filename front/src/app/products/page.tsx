@@ -1,7 +1,7 @@
 import CardContainer from "@/components/CardContainer/CardContainer";
 import Carrousel from "@/components/Carrousel/Carrousel";
 
-export default function HomeProducts() {
+ const HomeProducts: React.FC = () => {
  
   return (
     <>
@@ -10,3 +10,4 @@ export default function HomeProducts() {
     </>
   );
 }
+export default HomeProducts;

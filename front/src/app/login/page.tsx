@@ -2,7 +2,7 @@
 import Login from "@/components/Login/Login";
 import React, { useState } from 'react'
 
-const Page = () => {
+const LoginPage: React.FC = () => {
   const [token, setToken] = useState<string | null>(localStorage.getItem("userToken") ?? null);
 
   return (
@@ -10,4 +10,4 @@ const Page = () => {
   )
 }
 
-export default Page
+export default LoginPage;
