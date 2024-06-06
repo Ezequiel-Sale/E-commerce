@@ -1,4 +1,4 @@
-import HomeProducts from "./home/page";
+import HomeProducts from "./products/page";
 
 export default function Home() {
   return (
