@@ -7,7 +7,6 @@ import Swal from "sweetalert2";
 import Image from "next/image";
 import { redirect } from "next/navigation";
 import { createOrder } from "@/helpers/petitions";
-import { assert } from "console";
 import Link from "next/link";
 
 const Cart: React.FC<IProduct> = () => {
