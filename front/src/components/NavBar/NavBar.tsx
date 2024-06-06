@@ -141,13 +141,10 @@ const NavBar: React.FC = () => {
             <Button className="block bg-red-500 w-32 h-8 mr-1.5" onClick={logOut}>
               Cerrar Sesión
             </Button>
-            <div className="flex items-center">
+            <div className="flex items-center mr-2">
               <Link href="/cart">
                 <Button className="">&#128722;</Button>
               </Link>
-              <span className="text-white rounded-full bg-red-500 w-[12px] h-[12px] flex justify-center items-center text-xs mr-2">
-                {order.length}
-              </span>
             </div>
           </div>
         )}
