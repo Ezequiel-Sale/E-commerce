@@ -84,9 +84,9 @@ const Login: React.FC<LoginProps> = ({token, setToken}) => {
               <span className="text-blue-500 text-xs">Olvidaste tu contraseña?</span>
             </Link>
           </div>
-          <Button type="submit" className="bg-black w-16 h-6 cursor-pointer">
+          <button type="submit" className="bg-black w-16 h-6 text-white rounded-md cursor-pointer">
             Enviar
-          </Button>
+          </button>
         </Form>
       </Formik>
     </div>
@@ -95,11 +95,3 @@ const Login: React.FC<LoginProps> = ({token, setToken}) => {
 
 export default Login;
 
-
- // fetch(`${apiUrl}/users/login`, {
-          //   method: "POST",
-          //   headers: {
-          //     "Content-Type": "application/json",
-          //   },
-          //   body: JSON.stringify(valores),
-          // })

@@ -127,12 +127,12 @@ const Register: React.FC = () => {
                   className="text-red-500 text-sm"
                 />
               </div>
-              <Button
+              <button
                 type="submit"
-                className="bg-black w-16 h-6 cursor-pointer"
+                className="bg-black w-16 text-white rounded-md h-6 cursor-pointer"
               >
                 Enviar
-              </Button>
+              </button>
             </Form>
           );
         }}
