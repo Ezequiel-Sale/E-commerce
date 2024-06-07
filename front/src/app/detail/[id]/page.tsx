@@ -74,15 +74,15 @@ const DetailProduct = ({ params }: { params: { id: string } }) => {
               height={200}
             />
             <div className="flex flex-col ml-10 gap-2">
-              <h1 className="font-bold text-2xl">{productById.name}</h1>
-              <p className="font-bold">${productById.price}</p>
-              <p className="font-medium text-justify bg-gray-300 rounded-sm p-1">
+              <h1 className="font-bold text-2xl text-white">{productById.name}</h1>
+              <p className="font-bold text-white">${productById.price}</p>
+              <p className="font-medium text-justify text-white bg-gray-400 bg-opacity-25 rounded-md p-1">
                 {productById.description}
               </p>
               <Button
                 id={productById.id?.toString()}
                 onClick={handleAddToCart}
-                className="bg-black w-[150px] h-8"
+                className="bg-black w-[150px] h-8 hover:bg-white hover:text-black"
               >
                 Add to cart &#128722;
               </Button>

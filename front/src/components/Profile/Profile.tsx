@@ -28,7 +28,7 @@ const Profile: React.FC = () => {
             <p className='text-center text-red-400'>{userData?.userData?.phone}</p>
         </div>
         <div className='flex flex-col'>
-            <h1 className='text-xl font-bold text-center md:text-3xl md:font-bold '>Ordenes de compra</h1>
+            <h1 className='text-xl font-bold text-center md:text-3xl md:font-bold text-white'>Ordenes de compra</h1>
             <Orders/>
         </div>
     </div>

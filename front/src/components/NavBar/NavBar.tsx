@@ -75,31 +75,31 @@ const NavBar: React.FC = () => {
           <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false"><path d="M21 6H3V5h18v1zm0 5H3v1h18v-1zm0 6H3v1h18v-1z"></path></svg>
         </button>
         {dropdown && (
-          <div className="absolute right-0 mt-2 w-48 bg-black rounded-md shadow-lg ring-1 ring-black ring-opacity-5">
-            <div className="py-1">
+          <div className="absolute right-0 mt-2 w-40 bg-black bg-opacity-95 rounded-md shadow-lg ring-1 ring-black ring-opacity-5">
+            <div className="py-1 flex flex-col justify-center items-center gap-1">
               <Link href="/">
-                <Button className="block bg-red-500 w-full h-8">Productos</Button>
+                <button className="block btn">Productos</button>
               </Link>
               <Link href="/categories">
-                <Button className="block bg-red-500 w-full h-8 mt-0.5">Categorias</Button>
+                <Button className="block btn">Categorias</Button>
               </Link>
-              <Button className="block bg-red-500 w-full h-8 mt-0.5">Sobre Nosotros</Button>
-              <Button className="block bg-red-500 w-full h-8 mt-0.5">Contactanos</Button>
+              <Button className="block btn">Sobre Nosotros</Button>
+              <Button className="block btn">Contactanos</Button>
               {!userData?.token ? (
                 <>
                   <Link href={"/login"}>
-                    <Button className="block bg-red-500 w-full h-8 mt-0.5">Ingresar</Button>
+                    <Button className="block btn">Ingresar</Button>
                   </Link>
                   <Link href={"/register"}>
-                    <Button className="block bg-red-500 w-full h-8 mt-0.5">Registrarse</Button>
+                    <Button className="block btn">Registrarse</Button>
                   </Link>
                 </>
               ) : (
                 <>
                   <Link href={"/dashboard"}>
-                    <Button className="block bg-red-500 w-full h-8 mt-0.5">Perfil</Button>
+                    <Button className="block btn">Perfil</Button>
                   </Link>
-                  <Button className="block bg-red-500 w-full h-8 mt-0.5" onClick={logOut}>
+                  <Button className="block btn" onClick={logOut}>
                     Cerrar Sesión
                   </Button>
                   <div className="flex justify-center items-center w-full px-4 py-2 text-sm text-gray-700">
@@ -114,31 +114,31 @@ const NavBar: React.FC = () => {
         )}
       </div>
       <div className="hidden lg:flex items-center">
-        <div className="flex gap-1 lg:mr-44">
+        <div className="flex gap-1 lg:mr-40">
           <Link href="/">
-            <Button className="block bg-red-500 w-24 h-8">Productos</Button>
+            <Button className="block btn">Productos</Button>
           </Link>
           <Link href="/categories">
-            <Button className="block bg-red-500 w-24 h-8">Categorias</Button>
+            <Button className="block btn">Categorias</Button>
           </Link>
-          <Button className="block bg-red-500 w-36 h-8">Sobre Nosotros</Button>
-          <Button className="block bg-red-500 w-28 h-8">Contactanos</Button>
+          <Button className="block btn">Sobre Nosotros</Button>
+          <Button className="block btn">Contactanos</Button>
         </div>
         {!userData?.token ? (
           <div className="flex gap-1 mr-6 items-center">
             <Link href={"/login"}>
-              <Button className="block bg-red-500 w-24 h-8">Ingresar</Button>
+              <Button className="block btn">Ingresar</Button>
             </Link>
             <Link href={"/register"}>
-              <Button className="block bg-red-500 w-24 h-8">Registrarse</Button>
+              <Button className="block btn">Registrarse</Button>
             </Link>
           </div>
         ) : (
           <div className="flex gap-1 items-center">
             <Link href={"/dashboard"}>
-              <Button className="block bg-red-500 w-24 h-8">Perfil</Button>
+              <Button className="block btn">Perfil</Button>
             </Link>
-            <Button className="block bg-red-500 w-32 h-8 mr-1.5" onClick={logOut}>
+            <Button className="block btn" onClick={logOut}>
               Cerrar Sesión
             </Button>
             <div className="flex items-center mr-2">
