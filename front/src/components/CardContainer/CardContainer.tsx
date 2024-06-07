@@ -1,7 +1,6 @@
 import Card from "@/components/Card/Card";
 import { IProduct } from "@/helpers/types";
 import { fetchProducts } from "@/helpers/petitions";
-import Card2 from "../Card/Card2";
 
 
 export default async function CardContainer() {
