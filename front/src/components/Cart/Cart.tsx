@@ -88,9 +88,9 @@ const Cart: React.FC<IProduct> = () => {
                   key={indexCart}
                   className="box transition-transform hover:scale-110 drop-shadow-xl group z-0"
                 >
-                  <div className="relative group z-50 mt-2 flex flex-col justify-center items-center">
-                    <h4 className="font-bold text-white mt-4">{orden.name}</h4>
-                    <p className="text-white ">${orden.price}</p>
+                  <div className="relative w-[200px] h-[280px] group z-50 flex flex-col justify-center items-center">
+                    <h4 className="font-bold text-white">{orden.name}</h4>
+                    <p className="text-white mt-2">${orden.price}</p>
                     <div className="flex justify-center items-center h-36 mb-2 mt-2">
                       <Image
                         src={orden.image!}
@@ -100,7 +100,7 @@ const Cart: React.FC<IProduct> = () => {
                         className="object-contain"
                       />
                     </div>
-                      <p className="text-white text-[12px] absolute bottom-[-40px]">
+                      <p className="text-white text-[12px] absolute bottom-2 left-[50]">
                         Stock: {orden.stock}
                       </p>
                   </div>

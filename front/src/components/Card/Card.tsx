@@ -63,7 +63,7 @@ const Card: React.FC<IProduct> = ({ id, name, price, image, description, stock, 
 
   return (
     <>
-    <div className="box transition-transform hover:scale-110 drop-shadow-xl group z-0">
+    <div className="box w-[200px] h-[300px] transition-transform hover:scale-110 drop-shadow-xl group z-0">
       <div className="relative group z-50 mt-2 flex flex-col justify-center items-center">
       <span className="absolute top-[-2px] left-[5px] w-[190px] h-[230px] bg-black rounded-[15px] p-1 text-xs text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100 ">
           {description}

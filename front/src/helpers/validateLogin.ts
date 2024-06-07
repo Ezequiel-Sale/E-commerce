@@ -8,11 +8,11 @@ export const validacionesLogin: (valores: ILogin)=>Partial<ILogin> = (valores) =
         errors.email = "Email no valido";
     }
     if (!valores.password.trim()) {
-        errors.password = "El password es obligatorio";
+        errors.password = "La contrasena es obligatoria";
     } else if (valores.password.length < 6) {
-        errors.password = "El password debe ser al menos de 6 caracteres";
+        errors.password = "La contrasena debe ser al menos de 6 caracteres";
     }else if (valores.password.length > 20) {
-        errors.password = "El password debe ser maximo de 20 caracteres";
+        errors.password = "La contrasena debe ser maximo de 20 caracteres";
     }
     return errors;
 };

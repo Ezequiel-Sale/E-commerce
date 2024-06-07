@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root{
-  --color: #00A97F;
-  --color2: rgb(0, 0, 0);
+  --color: #d11616;
+  --color2: rgb(255, 255, 255);
 }
 
 body {
@@ -12,8 +12,6 @@ body {
 }
 
 .btn {
-  --color: #00A97F;
-  --color2: rgb(10, 25, 30);
   padding: 0.8em 1.58em;
   background-color: transparent;
   border-radius: 6px;
@@ -23,7 +21,7 @@ body {
   overflow: hidden;
   cursor: pointer;
   z-index: 1;
-  font-weight: 300;
+  font-weight: 800;
   font-size: 12px;
   font-family: 'Roboto', 'Segoe UI', sans-serif;
   text-transform: uppercase;
@@ -69,8 +67,6 @@ body {
 
 .box {
   position: relative;
-  width: 200px;
-  height: 300px;
   background: repeating-conic-gradient(
     from var(--a),
     #ff2770 0%,

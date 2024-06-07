@@ -14,7 +14,7 @@ export const validaciones: (values: IFormValues) => Partial<IFormValues> = (valu
     if (!values.email.trim()) {
       errors.email = "El email es requerido";
     } else if (!regExEmail.test(values.email)) {
-      errors.email = "Ingrese un correo electrónico válido";
+      errors.email = "Ingrese un email válido";
     }
     if (!values.phone) {
       errors.phone = "El telefono es requerido";

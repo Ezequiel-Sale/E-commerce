@@ -68,7 +68,7 @@ const NavBar: React.FC = () => {
         <button
           id="dropdownDefaultButton"
           data-dropdown-toggle="dropdown"
-          className="text-white bg-gray-600 hover:bg-gray-600 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm mr-4 px-5 py-2.5 text-center inline-flex items-center dark:bg-gray-600 dark:hover:bg-gray-600 dark:focus:ring-red-800"
+          className="text-white bg-white hover:bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm mr-4 px-5 py-2.5 text-center inline-flex items-center dark:hover:bg-gray-600 dark:focus:ring-red-800"
           type="button"
           onClick={handleDropdown}
         >
