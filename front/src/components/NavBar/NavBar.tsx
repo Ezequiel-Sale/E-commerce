@@ -114,7 +114,7 @@ const NavBar: React.FC = () => {
         )}
       </div>
       <div className="hidden lg:flex items-center">
-        <div className="flex gap-1 lg:mr-40">
+        <div className="flex gap-1 lg:mr-32">
           <Link href="/">
             <Button className="block btn">Productos</Button>
           </Link>
