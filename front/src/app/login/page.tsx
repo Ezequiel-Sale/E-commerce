@@ -1,6 +1,5 @@
 import React from "react";
 import Login from "@/components/Login/Login";
-import { LoginProps } from "@/helpers/types/loginrops";
 
 const page = ({ token, setToken }: any) => {
   return (

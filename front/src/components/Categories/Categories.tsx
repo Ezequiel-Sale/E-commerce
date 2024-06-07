@@ -28,7 +28,7 @@ const Categories: React.FC = () => {
       const dataFilter = data?.filter((item) => item.categoryId === categoryId);
       setFilteredData(dataFilter!);
     } else {
-      setFilteredData([]); //* si no existe producto que coincida con el categoryId setea un array vacio
+      setFilteredData([]);
     }
   };
 

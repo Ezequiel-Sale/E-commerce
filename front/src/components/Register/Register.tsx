@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import { Button } from "@material-tailwind/react";
 import { IFormValues } from "../../helpers/types/formType";
 import Link from "next/link";
 import { validaciones } from "../../helpers/validateRegister";

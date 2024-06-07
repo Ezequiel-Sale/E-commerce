@@ -72,7 +72,7 @@ const Card: React.FC<IProduct> = ({ id, name, price, image, description, stock, 
           </Link>
         </span>
         <h4 className="font-bold text-white">{name}</h4>
-        <p className="text-white ">${price}</p>
+        <p className="text-white mt-2">${price}</p>
         <div className="flex justify-center items-center h-36 mb-2 mt-2">
           <Image
             src={image}
@@ -82,7 +82,7 @@ const Card: React.FC<IProduct> = ({ id, name, price, image, description, stock, 
             className="object-contain"
           />
         </div>
-        <div className="absolute bottom-[-70px] flex gap-2 justify-center items-center">
+        <div className="absolute bottom-[-70px] mb-2 flex gap-2 justify-center items-center">
           {userData?.token && (
             <Button className="bg-red-500 w-24 h-8" onClick={handleAddToCart}>
               Comprar

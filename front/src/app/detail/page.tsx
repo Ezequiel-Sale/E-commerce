@@ -1,6 +1,5 @@
 import React from 'react'
 import DetailProduct from './[id]/page'
-import { Product } from '@/helpers/types/Product';
 
 
 const DetailPage = ({ params }: { params: { id: string } }) => {
