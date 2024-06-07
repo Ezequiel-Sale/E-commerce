@@ -1,7 +1,6 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import { Button } from "@material-tailwind/react";
 import { ILogin } from "../../helpers/types/loginType";
 import Link from 'next/link';
 import { validacionesLogin } from "../../helpers/validateLogin";
@@ -9,7 +8,6 @@ import { LoginProps } from "@/helpers/types/loginrops";
 import { useRouter } from "next/navigation";
 import { loginUser } from "@/helpers/petitions";
 import Swal from "sweetalert2";
-import { UserSession } from "@/helpers/types/userSession";
 
 
 const Login: React.FC<LoginProps> = () => {
@@ -43,8 +41,7 @@ const Login: React.FC<LoginProps> = () => {
           })
           .catch((err) => {
             Swal.fire({
-              title: {
-                text: err.response.data.message,},
+              title: err,
               icon: "error",
             });
           });

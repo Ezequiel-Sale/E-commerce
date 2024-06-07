@@ -63,8 +63,9 @@ const Card: React.FC<IProduct> = ({ id, name, price, image, description, stock, 
 
   return (
     <>
-      <div className="flex flex-col relative w-[200px] h-[300px] bg-red-500 p-4 rounded-md text-red-200 bg-opacity-95 transition-transform hover:scale-110 drop-shadow-xl group z-0">
-        <span className="absolute top-0 left-0 w-full h-64 bg-black rounded-md p-1 text-xs text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100 ">
+    <div className="box transition-transform hover:scale-110 drop-shadow-xl group z-0">
+      <div className="relative group z-50 mt-2 flex flex-col justify-center items-center">
+      <span className="absolute top-[-2px] left-[5px] w-[190px] h-[230px] bg-black rounded-[15px] p-1 text-xs text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100 ">
           {description}
           <Link href={`/detail/${id}`}>
             <Button className="absolute bottom-2 right-2 bg-red-500 cursor-pointer w-24 h-8">Detalle</Button>
@@ -72,21 +73,50 @@ const Card: React.FC<IProduct> = ({ id, name, price, image, description, stock, 
         </span>
         <h4 className="font-bold text-white">{name}</h4>
         <p className="text-white ">${price}</p>
-        <p className="text-white text-[12px]">Category: {categoriesToPreLoad[categoryId - 1].name}</p>
         <div className="flex justify-center items-center h-36 mb-2 mt-2">
-          <Image src={image} alt={name} width={150} height={150} className="object-contain"/>
+          <Image
+            src={image}
+            alt={name}
+            width={150}
+            height={150}
+            className="object-contain"
+          />
         </div>
-        <div className="absolute bottom-2 left-2 flex gap-2 items-center">
+        <div className="absolute bottom-[-70px] flex gap-2 justify-center items-center">
           {userData?.token && (
-            <Button className="bg-gray-900 w-24 h-8" onClick={handleAddToCart}>
+            <Button className="bg-red-500 w-24 h-8" onClick={handleAddToCart}>
               Comprar
             </Button>
           )}
           <p className="text-white text-[12px]">Stock: {stock}</p>
         </div>
       </div>
+    </div>
     </>
   );
 };
 
 export default Card;
+
+      // <div className="flex flex-col relative w-[200px] h-[300px] bg-red-500 p-4 rounded-md text-red-200 bg-opacity-95 transition-transform hover:scale-110 drop-shadow-xl group z-0">
+      //   <span className="absolute top-0 left-0 w-full h-64 bg-black rounded-md p-1 text-xs text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100 ">
+      //     {description}
+      //     <Link href={`/detail/${id}`}>
+      //       <Button className="absolute bottom-2 right-2 bg-red-500 cursor-pointer w-24 h-8">Detalle</Button>
+      //     </Link>
+      //   </span>
+      //   <h4 className="font-bold text-white">{name}</h4>
+      //   <p className="text-white ">${price}</p>
+      //   <p className="text-white text-[12px]">Category: {categoriesToPreLoad[categoryId - 1].name}</p>
+      //   <div className="flex justify-center items-center h-36 mb-2 mt-2">
+      //     <Image src={image} alt={name} width={150} height={150} className="object-contain"/>
+      //   </div>
+      //   <div className="absolute bottom-2 left-2 flex gap-2 items-center">
+      //     {userData?.token && (
+      //       <Button className="bg-gray-900 w-24 h-8" onClick={handleAddToCart}>
+      //         Comprar
+      //       </Button>
+      //     )}
+      //     <p className="text-white text-[12px]">Stock: {stock}</p>
+      //   </div>
+      // </div>

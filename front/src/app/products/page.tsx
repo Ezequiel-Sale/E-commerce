@@ -1,7 +1,8 @@
 import CardContainer from "@/components/CardContainer/CardContainer";
 import Carrousel from "@/components/Carrousel/Carrousel";
+import { IProduct } from "@/helpers/types";
 
- const HomeProducts: React.FC = () => {
+ const HomeProducts = () => {
  
   return (
     <>
