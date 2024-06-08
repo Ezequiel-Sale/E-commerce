@@ -44,7 +44,7 @@ const Categories: React.FC = () => {
         ))}
       </div>
 
-      {filteredData.length === 0 ? <div className='mt-4 text-center text-white'>No hay productos para mostrar</div> : (
+      {filteredData.length === 0 ? <div className='mt-4 text-center text-white my-10'>No hay productos para mostrar</div> : (
         <div className='mt-10 text-center flex justify-center items-center flex-wrap gap-3 mb-8'>
           {filteredData.map((product, index) => (
             <Card key={index} {...product} />
