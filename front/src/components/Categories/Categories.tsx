@@ -34,7 +34,7 @@ const Categories: React.FC = () => {
 
   return (
     <>
-      <div className='flex gap-2 justify-center items-center mt-2'>
+      <div className='flex gap-2 justify-center items-center mt-2 flex-wrap'>
         {categories.map((category, index) => (
           <div key={index} onClick={() => handleCategoryClick(category.name)} className='cursor-pointer'>
             <div className='w-24 h-24 bg-opacity-20 bg-black text-white rounded-full flex justify-center items-center transition-transform hover:bg-red-500 hover:scale-110 drop-shadow-xl group z-0'>
@@ -45,7 +45,7 @@ const Categories: React.FC = () => {
       </div>
 
       {filteredData.length === 0 ? <div className='mt-4 text-center text-white'>No hay productos para mostrar</div> : (
-        <div className='mt-10 text-center flex justify-center items-center flex-wrap gap-3'>
+        <div className='mt-10 text-center flex justify-center items-center flex-wrap gap-3 mb-8'>
           {filteredData.map((product, index) => (
             <Card key={index} {...product} />
           ))}
