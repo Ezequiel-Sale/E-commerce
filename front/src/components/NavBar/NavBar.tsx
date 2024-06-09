@@ -52,7 +52,7 @@ const NavBar: React.FC = () => {
   };
 
   return (
-    <div className="flex justify-between bg-black h-20 items-center fixed top-0 left-0 w-full z-50">
+    <div className="flex justify-between bg-black bg-opacity-85 h-20 items-center fixed top-0 left-0 w-full z-50">
       <div>
         <Link href="/">
           <Image
