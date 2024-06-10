@@ -38,7 +38,7 @@ const Register: React.FC = () => {
             })  
             .catch((err) => {
               Swal.fire({
-                title: err,
+                title: "Un usuario ya existe con esos datos",
                 icon: "error",
               });
             })
@@ -58,7 +58,7 @@ const Register: React.FC = () => {
                 </Link>
               </p>
               <div className="flex flex-col items-center text-white">
-                <label className="font-bold">Nombre</label>
+                <label className="font-bold">Nombre y Apellido</label>
                 <Field
                   type="text"
                   name="name"
@@ -123,6 +123,20 @@ const Register: React.FC = () => {
                 />
                 <ErrorMessage
                   name="password"
+                  component="div"
+                  className="text-red-500 text-sm text-center"
+                />
+              </div>
+              <div className="flex flex-col items-center text-white">
+                <label className="font-bold">Repita su contraseña</label>
+                <Field
+                  type="password"
+                  name="repitePassword"
+                  placeholder="********"
+                  className="w-60 pl-2 text-black"
+                />
+                <ErrorMessage
+                  name="repitePassword"
                   component="div"
                   className="text-red-500 text-sm text-center"
                 />

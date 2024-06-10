@@ -72,7 +72,15 @@ const NavBar: React.FC = () => {
           type="button"
           onClick={handleDropdown}
         >
-          <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false"><path d="M21 6H3V5h18v1zm0 5H3v1h18v-1zm0 6H3v1h18v-1z"></path></svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+            focusable="false"
+          >
+            <path d="M21 6H3V5h18v1zm0 5H3v1h18v-1zm0 6H3v1h18v-1z"></path>
+          </svg>
         </button>
         {dropdown && (
           <div className="absolute right-0 mt-2 w-40 bg-black bg-opacity-95 rounded-md shadow-lg ring-1 ring-black ring-opacity-5">
@@ -83,8 +91,12 @@ const NavBar: React.FC = () => {
               <Link href="/categories">
                 <Button className="block btn">Categorias</Button>
               </Link>
-              <Button className="block btn">Sobre Nosotros</Button>
-              <Button className="block btn">Contactanos</Button>
+              <Link href={"/about"}>
+                <Button className="block btn">Sobre Nosotros</Button>
+              </Link>
+              <Link href={"/contactUs"}>
+                <Button className="block btn">Contactanos</Button>
+              </Link>
               {!userData?.token ? (
                 <>
                   <Link href={"/login"}>
@@ -121,8 +133,12 @@ const NavBar: React.FC = () => {
           <Link href="/categories">
             <Button className="block btn">Categorias</Button>
           </Link>
-          <Button className="block btn">Sobre Nosotros</Button>
-          <Button className="block btn">Contactanos</Button>
+          <Link href={"/about"}>
+            <Button className="block btn">Sobre Nosotros</Button>
+          </Link>
+          <Link href={"/contactUs"}>
+            <Button className="block btn">Contactanos</Button>
+          </Link>
         </div>
         {!userData?.token ? (
           <div className="flex gap-1 mr-6 items-center">

@@ -36,6 +36,11 @@ const nextConfig = {
         hostname: 'www.patternb.com',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: "scontent.ftuc2-1.fna.fbcdn.net",
+        pathname: '/**',
+      }
     ],
   },
 };

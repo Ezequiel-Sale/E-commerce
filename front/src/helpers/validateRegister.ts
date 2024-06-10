@@ -41,5 +41,8 @@ export const validaciones: (values: IFormValues) => Partial<IFormValues> = (valu
       errors.password =  "Ingrese una contraseña que tenga entre 6 y 20 caracteres"
       
     }  
+    if(values.repitePassword !== values.password){
+      errors.repitePassword = "Las contrasenas no coinciden"
+    }
     return errors;
   }

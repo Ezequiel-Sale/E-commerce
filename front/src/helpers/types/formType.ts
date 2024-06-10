@@ -4,4 +4,5 @@ export interface IFormValues {
     phone: string;
     address: string;
     password: string;
+    repitePassword?: string;
   }

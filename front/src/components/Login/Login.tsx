@@ -42,8 +42,9 @@ const Login: React.FC<LoginProps> = () => {
               router.push("/");
             })
             .catch((err) => {
+              console.log(err)
               Swal.fire({
-                title: err,
+                title: "Error al iniciar sesión, correo electronico o contraseña incorrecta",
                 icon: "error",
               });
             });
