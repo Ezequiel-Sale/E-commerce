@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { ILogin } from "../../helpers/types/loginType";
 import Link from "next/link";
@@ -12,6 +12,15 @@ import Swal from "sweetalert2";
 const Login: React.FC<LoginProps> = () => {
   const router = useRouter();
   const [token, setToken] = useState<string | null>(null);
+  const passwordRef = useRef<HTMLInputElement>(null);
+  const [showPassword, setShowPassword] = useState(false);
+
+  const toggleShowPassword = () => {
+    setShowPassword(!showPassword);
+    if (passwordRef.current) {
+      passwordRef.current.type = showPassword ? "password" : "text";
+    }
+  };
   return (
     <div className="w-80 h-[80vh] -z-10 p-6 flex flex-col items-center mt-24 m-[auto] mb-4">
       <Formik<ILogin>
@@ -42,9 +51,10 @@ const Login: React.FC<LoginProps> = () => {
               router.push("/");
             })
             .catch((err) => {
-              console.log(err)
+              console.log(err);
               Swal.fire({
-                title: "Error al iniciar sesión, correo electronico o contraseña incorrecta",
+                title:
+                  "Error al iniciar sesión, correo electronico o contraseña incorrecta",
                 icon: "error",
               });
             });
@@ -52,7 +62,9 @@ const Login: React.FC<LoginProps> = () => {
       >
         <div className="box group z-0 flex justify-center items-center w-[350px] h-[400px] ">
           <Form className="top-8 z-50 flex flex-col items-center justify-center gap-4">
-            <h2 className=" text-4xl font-extrabold text-white font-sans">Ingresar</h2>
+            <h2 className=" text-4xl font-extrabold text-white font-sans">
+              Ingresar
+            </h2>
             <p className="text-xs text-white flex flex-col">
               Aun no tienes una cuenta?{" "}
               <Link href="/register" className="text-blue-500 text-xs">
@@ -75,12 +87,22 @@ const Login: React.FC<LoginProps> = () => {
             </div>
             <div className="flex flex-col items-center gap-2">
               <label className="font-bold text-white">Contraseña</label>
-              <Field
-                type="password"
-                name="password"
-                placeholder="********"
-                className="w-60 pl-2"
-              />
+              <div className="relative">
+                <Field
+                  innerRef={passwordRef}
+                  type={showPassword ? "text" : "password"}
+                  name="password"
+                  placeholder="********"
+                  className="w-60 pl-2 pr-8"
+                />
+                <button
+                  type="button"
+                  onClick={toggleShowPassword}
+                  className="absolute right-1"
+                >
+                  {showPassword ? "🙉" : "🙈"}
+                </button>
+              </div>
               <ErrorMessage
                 name="password"
                 component="div"
