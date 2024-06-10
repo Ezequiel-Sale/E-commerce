@@ -64,7 +64,7 @@ const DetailProduct = ({ params }: { params: { id: string } }) => {
 
   return (
     <>
-      <div className="flex flex-col mr-8 justify-center h-[100vh] md:flex md:flex-row md:justify-center md:m-[auto] md:items-center md:w-[50vw] md:h-[100vh]">
+      <div className="flex flex-col justify-center items-center gap-4 mt-8 h-[100vh] md:flex md:flex-row md:justify-center md:m-[auto] md:items-center md:w-[50vw] md:h-[100vh]">
         {productById && (
           <>
             <Image
@@ -76,7 +76,7 @@ const DetailProduct = ({ params }: { params: { id: string } }) => {
             <div className="flex flex-col ml-10 gap-2">
               <h1 className="font-bold text-2xl text-white">{productById.name}</h1>
               <p className="font-bold text-white">${productById.price}</p>
-              <p className="font-medium text-justify text-white bg-gray-400 bg-opacity-25 rounded-md p-1">
+              <p className="font-medium mr-8 text-justify text-white bg-gray-400 bg-opacity-25 rounded-md p-1">
                 {productById.description}
               </p>
               <Button

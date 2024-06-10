@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Button from "../Button/Button";
 import Image from "next/image";
 import Link from "next/link";
@@ -14,6 +14,7 @@ const NavBar: React.FC = () => {
   const [dropdown, setDropdown] = useState(false);
   const router = useRouter();
   const pathName = usePathname();
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -51,6 +52,19 @@ const NavBar: React.FC = () => {
     setDropdown(!dropdown);
   };
 
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setDropdown(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
     <div className="flex justify-between bg-black bg-opacity-85 h-20 items-center fixed top-0 left-0 w-full z-50">
       <div>
@@ -83,7 +97,7 @@ const NavBar: React.FC = () => {
           </svg>
         </button>
         {dropdown && (
-          <div className="absolute right-0 mt-2 w-40 bg-black bg-opacity-95 rounded-md shadow-lg ring-1 ring-black ring-opacity-5">
+          <div ref={dropdownRef} className="absolute right-0 mt-2 w-40 bg-black bg-opacity-95 rounded-md shadow-lg ring-1 ring-black ring-opacity-5">
             <div className="py-1 flex flex-col justify-center items-center gap-1">
               <Link href="/">
                 <button className="block btn">Productos</button>
