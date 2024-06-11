@@ -5,6 +5,8 @@ export const validaciones: (values: IFormValues) => Partial<IFormValues> = (valu
   
     const regExEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     const regexName = /^[a-zA-Z\s]+$/;
+    const regexAdress = /^[a-zA-Z0-9]+( [a-zA-Z0-9]+)*$/;
+
   
     if (!values.name.trim()) {
       errors.name = "El nombre es requerido";
@@ -25,6 +27,8 @@ export const validaciones: (values: IFormValues) => Partial<IFormValues> = (valu
     }
     if (!values.address.trim()) {
       errors.address = "La dirección es requerida";
+    }else if(!regexAdress.test(values.address)){
+      errors.address = "La dirección solo puede contener letras y numeros"
     }else if (values.address.length < 10) {
       errors.address = "La dirección debe tener al menos 10 caracteres";
     }else if (values.address.length > 50) {
