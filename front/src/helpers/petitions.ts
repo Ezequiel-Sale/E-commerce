@@ -7,7 +7,7 @@ export const fetchProducts = async () => {
     try {
         const response = await fetch(`${apiUrl}/products/`, {
           headers: {'ngrok-skip-browser-warning': 'true'},
-            next: { revalidate: 1000 },
+            next: { revalidate: 500 },
         });
         if (!response.ok) {
           throw new Error('Network response was not ok');

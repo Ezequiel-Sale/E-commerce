@@ -40,6 +40,11 @@ const nextConfig = {
         protocol: 'https',
         hostname: "scontent.ftuc2-1.fna.fbcdn.net",
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: "photos5.appleinsider.com",
+        pathname: '/**',
       }
     ],
   },

@@ -10,7 +10,7 @@ import { useRouter } from "next/navigation";
 import { fetchProductsById } from "@/helpers/petitions";
 import Swal from "sweetalert2";
 
-const Card: React.FC<IProduct> = ({ id, name, price, image, description, stock, categoryId }) => {
+const Card: React.FC<IProduct> = ({ id, name, price, image, description, stock }) => {
   const [userData, setUserData] = useState<UserSession | null>(null);
   const [productById, setProductById] = useState<IProduct | null>(null);
   const router = useRouter();

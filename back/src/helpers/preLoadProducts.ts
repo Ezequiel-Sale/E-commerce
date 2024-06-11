@@ -38,7 +38,7 @@ const productsToPreLoad: IProduct[] = [
     description:
       "Unleash your creativity and productivity with the iPad Pro: powerful performance, stunning Liquid Retina display, and all-day battery life make the iPad Pro the perfect tool for work and play. Transform your ideas into reality with the iPad Pro.",
     image:
-      "https://www.pikpng.com/pngl/m/89-899713_ipad-png-transparent-ipad-pro-10-5-inch-clipart.png",
+      "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111979_ipad-pro-12-2018.png",
     categoryId: 3,
     stock: 10,
   },
@@ -48,7 +48,7 @@ const productsToPreLoad: IProduct[] = [
     description:
       "Stay connected and healthy with the Apple Watch Series 6: track your workouts, monitor your health, and stay in touch with the people and information you care about most. Experience the future of health and wellness with the Apple Watch Series 6.",
     image:
-      "https://outtec.com.ar/wp-content/uploads/2021/01/2-22-768x768.png",
+      "https://photos5.appleinsider.com/price_guide/apple-watch-series-6-pp-header.png",
     categoryId: 8,
     stock: 10,
   },
