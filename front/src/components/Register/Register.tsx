@@ -104,7 +104,7 @@ const Register: React.FC = () => {
                 <Field
                   type="text"
                   name="address"
-                  placeholder="Ingrese su direccion"
+                  placeholder="Ej: Calle 123"
                   className="w-60 pl-2 text-black"
                 />
                 <ErrorMessage

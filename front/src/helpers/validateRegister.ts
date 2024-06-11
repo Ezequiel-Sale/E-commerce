@@ -29,7 +29,7 @@ export const validaciones: (values: IFormValues) => Partial<IFormValues> = (valu
       errors.address = "La dirección es requerida";
     }else if(!regexAdress.test(values.address)){
       errors.address = "La dirección solo puede contener letras y numeros"
-    }else if (values.address.length < 10) {
+    }else if (values.address.length < 8) {
       errors.address = "La dirección debe tener al menos 10 caracteres";
     }else if (values.address.length > 50) {
       errors.address = "La dirección debe tener maximo 50 caracteres";
