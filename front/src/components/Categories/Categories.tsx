@@ -15,7 +15,6 @@ const Categories: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       const dataProducts = await fetchProducts()
-      console.log(dataProducts)
       setData(dataProducts)
     }
     fetchData()
