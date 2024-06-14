@@ -89,6 +89,7 @@ const Cart: React.FC<IProduct> = () => {
                   className="box transition-transform hover:scale-110 drop-shadow-xl group z-0"
                 >
                   <div className="relative w-[200px] h-[280px] group z-50 flex flex-col justify-center items-center">
+                  <button onClick={deleteProduct} id={orden.id?.toString()} className="absolute top-2.5 right-2.5 flex justify-center items-center cursor-pointer rounded-full w-4 bg-red-500 text-white  text-xs border border-black">x</button>
                     <h4 className="font-bold text-white">{orden.name}</h4>
                     <p className="text-white mt-2">${orden.price}</p>
                     <div className="flex justify-center items-center h-36 mb-2 mt-2">
